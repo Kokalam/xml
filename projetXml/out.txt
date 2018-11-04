@@ -1,0 +1,10 @@
+C:0,G:72,H:119,M:138,P:232,S:268,
+Carol Critchlow:Prakash Panangaden,
+Christian Lengauer:Sergei Gorlatch,
+Giuseppe Serazzi:Maria Calzarossa,M. Italiani,
+Hans Ulrich Simon:
+M. Italiani:Maria Calzarossa,Giuseppe Serazzi,
+Maria Calzarossa:M. Italiani,Giuseppe Serazzi,
+Prakash Panangaden:Carol Critchlow,
+Sanjeev Saxena:
+Sergei Gorlatch:Christian Lengauer,
