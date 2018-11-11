@@ -149,33 +149,34 @@ public class XmlHandler extends DefaultHandler {
 			if (isArticle)
 				currentArticle.setYear(currentYear);
 			else if (isInproceedings)
-				currentInpro.setTitle(currentYear);
+				currentInpro.setYear(currentYear);
 			currentYear = "";
 			isYear = false;
 			break;
 		case ARTICLE:
 			if (goodAuthor) {
-				isArticle = traitementCoAuthors(currentArticle);
+				traitementCoAuthors(currentArticle);
 				extract.getArticles().add(currentArticle);
 				goodAuthor = false;
 			}
+			isArticle = false;
 			break;
 		case INPROCEEDINGS:
 			if (goodAuthor) {
-				isInproceedings = traitementCoAuthors(currentInpro);
+				traitementCoAuthors(currentInpro);
 				extract.getInproceedings().add(currentInpro);
 				goodAuthor = false;
 			}
+			isInproceedings = false;
 			break;
 		}
 	}
 
-	private boolean traitementCoAuthors(Paper paper) {
+	private void traitementCoAuthors(Paper paper) {
 		paper.getAuthors().forEach(authors -> {
 			if (!authors.equals(nameToFind))
 				extract.addCoauthor(authors);
 		});
-		return false;
 	}
 
 	@Override
