@@ -31,7 +31,7 @@ public class Compiler {
 
 		try {
 			// et un consommateur qui ne fait rien
-			cons = new CompilerHandlerBis("out.txt");
+			cons = new SQLHandler("out.txt");
 			prod.setContentHandler(cons);
 			prod.setErrorHandler(cons);
 		} catch (Exception e) {
